@@ -1,2 +1,5 @@
 # Lineupz
-iOS app to help coaches early manage their teams' schedule and quickly generate rule-compliant lineups
+Created by Arya Tschand 2018-2019
+Made for Marlboro Recreation Basketball League to help coaches early manage their teams' schedule and quickly generate rule-compliant lineups.
+
+For inquiries about usage in other recreation sports leagues, please contact me at aryatschand616@gmail.com or 732-535-6202 and I will be glad to help you.
