@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		420A97E922C3C56200376223 /* loadingpic.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A97E822C3C56200376223 /* loadingpic.png */; };
+		422B070220FFDC65006D3726 /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B070120FFDC65006D3726 /* ScheduleTableViewController.swift */; };
+		422B070420FFDDD8006D3726 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B070320FFDDD8006D3726 /* Game.swift */; };
+		422D520721061A5D001393D0 /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422D520621061A5D001393D0 /* GameInfoViewController.swift */; };
+		42487BC1212F4E68004D59B7 /* GameOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42487BC0212F4E68004D59B7 /* GameOptionsTableViewController.swift */; };
+		42487BC3212F526E004D59B7 /* LineupPlayerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42487BC2212F526E004D59B7 /* LineupPlayerListTableViewController.swift */; };
+		425C2A112118ADDA00875AFC /* TeamOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425C2A102118ADDA00875AFC /* TeamOptionsTableViewController.swift */; };
+		42833C4D22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42833C4C22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift */; };
+		429D00EC22E0CAFA000AD515 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429D00EB22E0CAFA000AD515 /* AppInfoViewController.swift */; };
+		429D00EE22E75A00000AD515 /* LoadedTeams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429D00ED22E75A00000AD515 /* LoadedTeams.swift */; };
+		42ADBA6F20EFD3660069C9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA6E20EFD3660069C9CB /* AppDelegate.swift */; };
+		42ADBA7120EFD3660069C9CB /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA7020EFD3660069C9CB /* PlayerListViewController.swift */; };
+		42ADBA7420EFD3660069C9CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ADBA7220EFD3660069C9CB /* Main.storyboard */; };
+		42ADBA7620EFD3660069C9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42ADBA7520EFD3660069C9CB /* Assets.xcassets */; };
+		42ADBA7920EFD3660069C9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42ADBA7720EFD3660069C9CB /* LaunchScreen.storyboard */; };
+		42ADBA8120F0102D0069C9CB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA8020F0102D0069C9CB /* Player.swift */; };
+		42ADBA8D20F9558E0069C9CB /* PlayerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA8C20F9558E0069C9CB /* PlayerInfoViewController.swift */; };
+		42ADBA9120FA46060069C9CB /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA9020FA46060069C9CB /* TeamInfoViewController.swift */; };
+		42ADBA9520FA46380069C9CB /* TeamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA9420FA46380069C9CB /* TeamListTableViewController.swift */; };
+		42ADBA9720FA46690069C9CB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA9620FA46690069C9CB /* Team.swift */; };
+		42D47DAF2149A38700126D03 /* LineupPageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D47DAE2149A38700126D03 /* LineupPageTableView.swift */; };
+		8F26016F6E6685CC44424CB5 /* Pods_Rec_Basketball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CFF6ED8C8598F6BA8CD9A8 /* Pods_Rec_Basketball.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05962F67148F065C855943B4 /* Pods-Rec Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rec Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball.debug.xcconfig"; sourceTree = "<group>"; };
+		420A97E822C3C56200376223 /* loadingpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingpic.png; sourceTree = "<group>"; };
+		422B070120FFDC65006D3726 /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		422B070320FFDDD8006D3726 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		422D520621061A5D001393D0 /* GameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
+		42487BC0212F4E68004D59B7 /* GameOptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsTableViewController.swift; sourceTree = "<group>"; };
+		42487BC2212F526E004D59B7 /* LineupPlayerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupPlayerListTableViewController.swift; sourceTree = "<group>"; };
+		425C2A102118ADDA00875AFC /* TeamOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamOptionsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		42833C4C22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupRulesInfoViewController.swift; sourceTree = "<group>"; };
+		42833C4E22D7A16D00DE7B8E /* Rec Basketball.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rec Basketball.entitlements"; sourceTree = "<group>"; };
+		429D00EB22E0CAFA000AD515 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
+		429D00ED22E75A00000AD515 /* LoadedTeams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedTeams.swift; sourceTree = "<group>"; };
+		42ADBA6B20EFD3660069C9CB /* Rec Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rec Basketball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42ADBA6E20EFD3660069C9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42ADBA7020EFD3660069C9CB /* PlayerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
+		42ADBA7320EFD3660069C9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42ADBA7520EFD3660069C9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42ADBA7820EFD3660069C9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42ADBA7A20EFD3660069C9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42ADBA8020F0102D0069C9CB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		42ADBA8C20F9558E0069C9CB /* PlayerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoViewController.swift; sourceTree = "<group>"; };
+		42ADBA9020FA46060069C9CB /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
+		42ADBA9420FA46380069C9CB /* TeamListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListTableViewController.swift; sourceTree = "<group>"; };
+		42ADBA9620FA46690069C9CB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		42D47DAE2149A38700126D03 /* LineupPageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupPageTableView.swift; sourceTree = "<group>"; };
+		858540B2C1629A60AB6A8D6F /* Pods-Rec Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rec Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball.release.xcconfig"; sourceTree = "<group>"; };
+		96CFF6ED8C8598F6BA8CD9A8 /* Pods_Rec_Basketball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rec_Basketball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42ADBA6820EFD3660069C9CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F26016F6E6685CC44424CB5 /* Pods_Rec_Basketball.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42ADBA6220EFD3660069C9CB = {
+			isa = PBXGroup;
+			children = (
+				42ADBA6D20EFD3660069C9CB /* Rec Basketball */,
+				42ADBA6C20EFD3660069C9CB /* Products */,
+				A17A1E0F585228947E84EF78 /* Pods */,
+				D223DA6BFDABF8ED1E6D93C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		42ADBA6C20EFD3660069C9CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42ADBA6B20EFD3660069C9CB /* Rec Basketball.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42ADBA6D20EFD3660069C9CB /* Rec Basketball */ = {
+			isa = PBXGroup;
+			children = (
+				42833C4E22D7A16D00DE7B8E /* Rec Basketball.entitlements */,
+				420A97E822C3C56200376223 /* loadingpic.png */,
+				42ADBA6E20EFD3660069C9CB /* AppDelegate.swift */,
+				429D00EB22E0CAFA000AD515 /* AppInfoViewController.swift */,
+				42ADBA9420FA46380069C9CB /* TeamListTableViewController.swift */,
+				425C2A102118ADDA00875AFC /* TeamOptionsTableViewController.swift */,
+				42ADBA9020FA46060069C9CB /* TeamInfoViewController.swift */,
+				42ADBA7020EFD3660069C9CB /* PlayerListViewController.swift */,
+				42ADBA8C20F9558E0069C9CB /* PlayerInfoViewController.swift */,
+				422B070120FFDC65006D3726 /* ScheduleTableViewController.swift */,
+				42487BC0212F4E68004D59B7 /* GameOptionsTableViewController.swift */,
+				422D520621061A5D001393D0 /* GameInfoViewController.swift */,
+				42487BC2212F526E004D59B7 /* LineupPlayerListTableViewController.swift */,
+				42D47DAE2149A38700126D03 /* LineupPageTableView.swift */,
+				42833C4C22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift */,
+				42ADBA8020F0102D0069C9CB /* Player.swift */,
+				422B070320FFDDD8006D3726 /* Game.swift */,
+				42ADBA9620FA46690069C9CB /* Team.swift */,
+				429D00ED22E75A00000AD515 /* LoadedTeams.swift */,
+				42ADBA7220EFD3660069C9CB /* Main.storyboard */,
+				42ADBA7520EFD3660069C9CB /* Assets.xcassets */,
+				42ADBA7720EFD3660069C9CB /* LaunchScreen.storyboard */,
+				42ADBA7A20EFD3660069C9CB /* Info.plist */,
+			);
+			path = "Rec Basketball";
+			sourceTree = "<group>";
+		};
+		A17A1E0F585228947E84EF78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05962F67148F065C855943B4 /* Pods-Rec Basketball.debug.xcconfig */,
+				858540B2C1629A60AB6A8D6F /* Pods-Rec Basketball.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D223DA6BFDABF8ED1E6D93C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96CFF6ED8C8598F6BA8CD9A8 /* Pods_Rec_Basketball.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42ADBA6A20EFD3660069C9CB /* Rec Basketball */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42ADBA7D20EFD3660069C9CB /* Build configuration list for PBXNativeTarget "Rec Basketball" */;
+			buildPhases = (
+				60872FC8FA0D2639CC2CC96E /* [CP] Check Pods Manifest.lock */,
+				42ADBA6720EFD3660069C9CB /* Sources */,
+				42ADBA6820EFD3660069C9CB /* Frameworks */,
+				42ADBA6920EFD3660069C9CB /* Resources */,
+				2E4914C76C3CB933AA91698D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rec Basketball";
+			productName = "Rec Basketball";
+			productReference = 42ADBA6B20EFD3660069C9CB /* Rec Basketball.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42ADBA6320EFD3660069C9CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Arya Tschand";
+				TargetAttributes = {
+					42ADBA6A20EFD3660069C9CB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 42ADBA6620EFD3660069C9CB /* Build configuration list for PBXProject "Rec Basketball" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42ADBA6220EFD3660069C9CB;
+			productRefGroup = 42ADBA6C20EFD3660069C9CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42ADBA6A20EFD3660069C9CB /* Rec Basketball */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42ADBA6920EFD3660069C9CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42ADBA7920EFD3660069C9CB /* LaunchScreen.storyboard in Resources */,
+				42ADBA7620EFD3660069C9CB /* Assets.xcassets in Resources */,
+				42ADBA7420EFD3660069C9CB /* Main.storyboard in Resources */,
+				420A97E922C3C56200376223 /* loadingpic.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E4914C76C3CB933AA91698D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60872FC8FA0D2639CC2CC96E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rec Basketball-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42ADBA6720EFD3660069C9CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				422B070220FFDC65006D3726 /* ScheduleTableViewController.swift in Sources */,
+				422B070420FFDDD8006D3726 /* Game.swift in Sources */,
+				429D00EC22E0CAFA000AD515 /* AppInfoViewController.swift in Sources */,
+				42ADBA9120FA46060069C9CB /* TeamInfoViewController.swift in Sources */,
+				42D47DAF2149A38700126D03 /* LineupPageTableView.swift in Sources */,
+				42ADBA7120EFD3660069C9CB /* PlayerListViewController.swift in Sources */,
+				42487BC1212F4E68004D59B7 /* GameOptionsTableViewController.swift in Sources */,
+				42487BC3212F526E004D59B7 /* LineupPlayerListTableViewController.swift in Sources */,
+				422D520721061A5D001393D0 /* GameInfoViewController.swift in Sources */,
+				42ADBA9720FA46690069C9CB /* Team.swift in Sources */,
+				425C2A112118ADDA00875AFC /* TeamOptionsTableViewController.swift in Sources */,
+				42ADBA9520FA46380069C9CB /* TeamListTableViewController.swift in Sources */,
+				42ADBA8D20F9558E0069C9CB /* PlayerInfoViewController.swift in Sources */,
+				42833C4D22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift in Sources */,
+				42ADBA8120F0102D0069C9CB /* Player.swift in Sources */,
+				42ADBA6F20EFD3660069C9CB /* AppDelegate.swift in Sources */,
+				429D00EE22E75A00000AD515 /* LoadedTeams.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42ADBA7220EFD3660069C9CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42ADBA7320EFD3660069C9CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42ADBA7720EFD3660069C9CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42ADBA7820EFD3660069C9CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42ADBA7B20EFD3660069C9CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42ADBA7C20EFD3660069C9CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42ADBA7E20EFD3660069C9CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05962F67148F065C855943B4 /* Pods-Rec Basketball.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMPVP9B9U3;
+				INFOPLIST_FILE = "Rec Basketball/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tschand.lineupz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42ADBA7F20EFD3660069C9CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 858540B2C1629A60AB6A8D6F /* Pods-Rec Basketball.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMPVP9B9U3;
+				INFOPLIST_FILE = "Rec Basketball/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tschand.lineupz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42ADBA6620EFD3660069C9CB /* Build configuration list for PBXProject "Rec Basketball" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42ADBA7B20EFD3660069C9CB /* Debug */,
+				42ADBA7C20EFD3660069C9CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42ADBA7D20EFD3660069C9CB /* Build configuration list for PBXNativeTarget "Rec Basketball" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42ADBA7E20EFD3660069C9CB /* Debug */,
+				42ADBA7F20EFD3660069C9CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42ADBA6320EFD3660069C9CB /* Project object */;
+}
