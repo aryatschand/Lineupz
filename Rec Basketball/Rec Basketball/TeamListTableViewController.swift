@@ -12,20 +12,20 @@ import SwiftSoup
 class TeamListTableViewController: UITableViewController {
     var idNumber: Int = 0
     var htmlcontents: String = ""
-    var Array1: [String] = ["Default"]
-    var Array2: [String] = ["Default"]
-    var Array3: [String] = ["Default"]
-    var Array4: [String] = ["Default"]
-    var Array5: [String] = ["Default"]
-    var Array6: [String] = ["Default"]
-    var Array7: [String] = ["Default"]
-    var Array8: [String] = ["Default"]
-    var Array15: [String] = ["Default"]
-    var Array9: [String] = ["Default"]
-    var Array11: [String] = ["Default"]
-    var Array12: [String] = ["Default"]
-    var Array13: [String] = ["Default"]
-    var Array14: [String] = ["Default"]
+    var Array1: [String] = ["Default", "Bulls", "Bucks"]
+    var Array2: [String] = ["Default", "Bulls", "Bucks"]
+    var Array3: [String] = ["Default", "Bulls", "Bucks"]
+    var Array4: [String] = ["Default", "Bulls", "Bucks"]
+    var Array5: [String] = ["Default", "Bulls", "Bucks"]
+    var Array6: [String] = ["Default", "Bulls", "Bucks"]
+    var Array7: [String] = ["Default", "Bulls", "Bucks"]
+    var Array8: [String] = ["Default", "Bulls", "Bucks"]
+    var Array15: [String] = ["Default", "Bulls", "Bucks"]
+    var Array9: [String] = ["Default", "Bulls", "Bucks"]
+    var Array11: [String] = ["Default", "Bulls", "Bucks"]
+    var Array12: [String] = ["Default", "Bulls", "Bucks"]
+    var Array13: [String] = ["Default", "Bulls", "Bucks"]
+    var Array14: [String] = ["Default", "Bulls", "Bucks"]
     var arraylist: [[String]] = []
     let emptyarray: [String] = []
     let idArray: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 15, 9, 11, 12, 13, 14]
@@ -120,6 +120,7 @@ class TeamListTableViewController: UITableViewController {
     }
     
     func LoadTeamNames() {
+        
         arraylist.append(emptyarray)
         arraylist.append(Array1)
         arraylist.append(Array2)
@@ -135,7 +136,7 @@ class TeamListTableViewController: UITableViewController {
         arraylist.append(Array12)
         arraylist.append(Array13)
         arraylist.append(Array14)
-        
+         /*
         // Draw HTML contents from specific marlborobasketball.com link based on team gender and grade
         for x in 1...14 {
             idNumber = idArray[x]
@@ -199,6 +200,8 @@ class TeamListTableViewController: UITableViewController {
                 self.present(alert, animated: true)
             }
         }
+ */
+
     }
     
     // Save teams and reload data every time view reappears

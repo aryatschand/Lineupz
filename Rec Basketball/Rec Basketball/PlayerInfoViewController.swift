@@ -83,7 +83,7 @@ class PlayerInfoViewController: UIViewController, UIPickerViewDelegate, UIPicker
             if (NumberInput.text?.count)! >= 12 {
                 tenDigitsReached = true
                 NumberInput.text = stringPhoneNumber
-                NumberLabel.text = "Parent Phone Number (Compelete)"
+                NumberLabel.text = "Parent Phone Number (Complete)"
                 NumberLabel.textColor = UIColor.green
                 textFieldShouldReturn(NumberInput)
             } else {
@@ -251,7 +251,6 @@ class PlayerInfoViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 team.playerList[playerIndex].name = "remove"
                 if team.numberOfGames >= 1 && team.gameList[0].playerList.indices.contains(playerIndex) {
                     for var a in 1...self.team.numberOfGames{
-                        print(self.team.gameList[a-1].Venue)
                         if self.team.gameList[a-1].playerList.count >= playerIndex {
                             self.team.gameList[a-1].playerList.remove(at: playerIndex)
                         }

@@ -37,7 +37,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
     var remindString: String = ""
     var emailRemindString: String = ""
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Teams.plist")
-    let titleArray: [String] = ["Game Info (Location, Time, Opponent)", "Player List (Who's Coming)", "Lineup", "Send Email Reminder", "Send SMS Reminder", "Send Lineup via Email", "Add Pool Player", "Remove Pool Player", "Reset Lineup"]
+    let titleArray: [String] = ["Lineup Name + Details", "Player List (Who's Coming)", "Lineup", "Send Lineup via Email", "Add Pool Player", "Remove Pool Player","Reset Lineup"]
     var NameTwoD: [[String]] = []
     var SegmentOneNameIndex: [String] = []
     var SegmentTwoNameIndex: [String] = []
@@ -57,10 +57,10 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
     // Set rows in table and make lineup row red if lineup is incomplete
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameTitleCell", for: indexPath)
-        if team.gameList[gameIndex].lineupIncomplete == true && indexPath.row == 2 {
+        if team.gameList[gameIndex].lineupIncomplete == true && indexPath.row == 1 {
             cell.textLabel?.textColor = UIColor.red
             cell.textLabel?.text = titleArray[indexPath.row] + " - Incomplete"
-        } else if team.gameList[gameIndex].lineupIncomplete == false && indexPath.row == 2 {
+        } else if team.gameList[gameIndex].lineupIncomplete == false && indexPath.row == 1 {
             cell.textLabel?.textColor = UIColor.black
             cell.textLabel?.text = titleArray[indexPath.row] + " - Complete"
         } else {
@@ -76,10 +76,12 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
         } else {
             tableView.deselectRow(at: indexPath, animated: true)
             if indexPath.row == 0 {
-                self.performSegue(withIdentifier: "OptionsToGameInfo", sender: self)
+                self.performSegue(withIdentifier: "Details", sender: self)
             } else if indexPath.row == 1 {
                 self.performSegue(withIdentifier: "OptionsToPlayerList", sender: self)
             } else if indexPath.row == 2 {
+                self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
+            } else if indexPath.row == 3 {
                 var playersNoOpen: Int = 0
                 var canSegue: Bool = true
                 if team.gameList[gameIndex].SegmentOneArray.count != 0 {
@@ -143,49 +145,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                 } else {
                     self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
                 }
-            } else if indexPath.row == 3 {
-                emailArray = []
-                if team.playerList.count >= 1 {
-                    for var x in 0...team.playerList.count-1{
-                        emailArray.append(team.playerList[x].email)
-                    }
-                    
-                    // Compose email contents and popup email page for user to send reminder
-                    let composeVC = MFMailComposeViewController()
-                    composeVC.mailComposeDelegate = self
-                    composeVC.setToRecipients(emailArray)
-                    composeVC.setSubject("Game Reminder")
-                    composeVC.setMessageBody(emailRemindString, isHTML: false)
-                    self.present(composeVC, animated: true, completion: nil)
-                } else {
-                    let alert = UIAlertController(title: "No Players", message: "There are no players entered for the team.", preferredStyle: .alert)
-                    let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
-                    })
-                    alert.addAction(cancel)
-                    self.present(alert, animated: true, completion: nil)
-                }
-            } else if indexPath.row == 4 {
-                phoneNumberArray = []
-                if team.playerList.count >= 1 {
-                    for var x in 0...team.playerList.count-1{
-                        phoneNumberArray.append(team.playerList[x].phoneNumber)
-                    }
-                    
-                    // Compose text message contents and popup iMessage page for user to send reminder
-                    let messageVC = MFMessageComposeViewController()
-                    messageVC.body = remindString
-                    messageVC.recipients = phoneNumberArray
-                    messageVC.messageComposeDelegate = self
-                    present(messageVC, animated: true, completion: nil)
-                } else {
-                    let alert = UIAlertController(title: "No Players", message: "There are no players entered for the team.", preferredStyle: .alert)
-                    let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
-                    })
-                    alert.addAction(cancel)
-                    self.present(alert, animated: true, completion: nil)
-                }
-            // Prepare email containing lineup and positions
-            } else if indexPath.row == 5 && team.gameList[gameIndex].sortedRatingArray.count != 0 {
+            } else if indexPath.row == 4 && team.gameList[gameIndex].sortedRatingArray.count != 0 {
                 SegmentOneNameIndex = []
                 SegmentTwoNameIndex = []
                 SegmentThreeNameIndex = []
@@ -358,7 +318,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                     present(composeVC, animated: true, completion: nil)
                 } catch {
                 }
-            } else if indexPath.row == 6 && team.gameList[gameIndex].introGiven == true {
+            } else if indexPath.row == 5 && team.gameList[gameIndex].introGiven == true {
                 var poolPlayer = Player()
                 poolPlayer.name = "POOL PLAYER"
                 poolPlayer.rating = 10
@@ -371,7 +331,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                 team.gameList[gameIndex].SegmentFourArray.append(poolPlayer.copy() as! Player)
                 team.gameList[gameIndex].SegmentFiveArray.append(poolPlayer.copy() as! Player)
                 team.gameList[gameIndex].SegmentSixArray.append(poolPlayer.copy() as! Player)
-            } else if indexPath.row == 7 && team.gameList[gameIndex].introGiven == true && NameTwoD[0].contains("POOL PLAYER") {
+            } else if indexPath.row == 6 && team.gameList[gameIndex].introGiven == true && NameTwoD[0].contains("POOL PLAYER") {
                 // Switch each pool player to OPEN so it can be replaced
                 var indexOne: Int = NameTwoD[0].index(of: "POOL PLAYER")!
                 var indexTwo: Int = NameTwoD[1].index(of: "POOL PLAYER")!
@@ -385,7 +345,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                 team.gameList[gameIndex].SegmentFourArray[indexFour].name = "OPEN"
                 team.gameList[gameIndex].SegmentFiveArray[indexFive].name = "OPEN"
                 team.gameList[gameIndex].SegmentSixArray[indexSix].name = "OPEN"
-            } else if indexPath.row == 8 {
+            } else if indexPath.row == 7 {
                 team.gameList[gameIndex].introGiven = false
             }
         }
@@ -394,6 +354,14 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
     // If the lineup is incomplete or not enough players are playing, alert the user. Also, set the remind strings for when needed
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if team.gameList[gameIndex].name == "" {
+            let alert = UIAlertController(title: "Empty Name", message: "Please enter a name for the lineup.", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                self.performSegue(withIdentifier: "Details", sender: self)
+            })
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+        }
         if team.playerList.count <= 4 {
             let alert = UIAlertController(title: "Not Enough Players", message: "Less than 5 players were entered into the team. Please add 5 or more players to make a full team", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
@@ -411,7 +379,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                team.gameList[gameIndex].playerList[x].availability = team.playerList[x].availabilityArray[gameIndex]
             }
         }
-
+ /*
         if team.coachName != "" {
             remindString = "This is a reminder from Coach \(team.coachName) that our game against the \(team.gameList[gameIndex].Opponent) is on \(team.gameList[gameIndex].Date) at \(team.gameList[gameIndex].Time) in \(team.gameList[gameIndex].Venue)."
             emailRemindString = "\(team.name)," + "\n" + "This is a reminder that our game against the \(team.gameList[gameIndex].Opponent) is on \(team.gameList[gameIndex].Date) at \(team.gameList[gameIndex].Time) in \(team.gameList[gameIndex].Venue). Let me know if you can come!" + "\n" + "Coach \(team.coachName)"
@@ -419,6 +387,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
             remindString = "This is a reminder that our game against the \(team.gameList[gameIndex].Opponent) is on \(team.gameList[gameIndex].Date) at \(team.gameList[gameIndex].Time) in \(team.gameList[gameIndex].Venue)."
             emailRemindString = "\(team.name)," + "\n" + "This is a reminder that our game against the \(team.gameList[gameIndex].Opponent) is on \(team.gameList[gameIndex].Date) at \(team.gameList[gameIndex].Time) in \(team.gameList[gameIndex].Venue). Let me know if you can come!"
         }
+ */
         
         if team.gameList[gameIndex].introGiven == true {
             NameTwoD = []
@@ -468,11 +437,11 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OptionsToGameInfo" {
-            var GameInfoViewController = segue.destination as! GameInfoViewController
+            /*var GameInfoViewController = segue.destination as! GameInfoViewController
             GameInfoViewController.gameIndex = gameIndex
             GameInfoViewController.team = team
             GameInfoViewController.teamArray = teamArray
-            GameInfoViewController.selectedGame = selectedGame
+            GameInfoViewController.selectedGame = selectedGame */
         } else if segue.identifier == "OptionsToPlayerList" {
             var LineupPlayerListTableViewController = segue.destination as! LineupPlayerListTableViewController
             LineupPlayerListTableViewController.gameIndex = gameIndex
@@ -483,6 +452,11 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
             LineupPageTableView.team = team
             LineupPageTableView.gameIndex = gameIndex
             LineupPageTableView.teamArray = teamArray
+        } else if segue.identifier == "Details" {
+            var LineupDetailsViewController = segue.destination as! LineupDetailsViewController
+            LineupDetailsViewController.team = team
+            LineupDetailsViewController.gameIndex = gameIndex
+            LineupDetailsViewController.teamArray = teamArray
         }
     }
 }

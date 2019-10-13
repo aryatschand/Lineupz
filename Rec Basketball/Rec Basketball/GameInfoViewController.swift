@@ -5,7 +5,7 @@
 //  Created by Arya Tschand on 7/23/18.
 //  Copyright © 2018 Arya Tschand. All rights reserved.
 //
-
+/*
 import UIKit
 import SwiftSoup
 
@@ -291,3 +291,4 @@ class GameInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
 }
+*/

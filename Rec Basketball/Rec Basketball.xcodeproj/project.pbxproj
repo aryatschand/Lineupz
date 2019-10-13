@@ -27,6 +27,7 @@
 		42ADBA9120FA46060069C9CB /* TeamInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA9020FA46060069C9CB /* TeamInfoViewController.swift */; };
 		42ADBA9520FA46380069C9CB /* TeamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA9420FA46380069C9CB /* TeamListTableViewController.swift */; };
 		42ADBA9720FA46690069C9CB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADBA9620FA46690069C9CB /* Team.swift */; };
+		42C44EC62352B84A00D0ECAB /* LineupDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C44EC52352B84A00D0ECAB /* LineupDetailsViewController.swift */; };
 		42D47DAF2149A38700126D03 /* LineupPageTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D47DAE2149A38700126D03 /* LineupPageTableView.swift */; };
 		8F26016F6E6685CC44424CB5 /* Pods_Rec_Basketball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CFF6ED8C8598F6BA8CD9A8 /* Pods_Rec_Basketball.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		42ADBA9020FA46060069C9CB /* TeamInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoViewController.swift; sourceTree = "<group>"; };
 		42ADBA9420FA46380069C9CB /* TeamListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListTableViewController.swift; sourceTree = "<group>"; };
 		42ADBA9620FA46690069C9CB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		42C44EC52352B84A00D0ECAB /* LineupDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupDetailsViewController.swift; sourceTree = "<group>"; };
 		42D47DAE2149A38700126D03 /* LineupPageTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupPageTableView.swift; sourceTree = "<group>"; };
 		858540B2C1629A60AB6A8D6F /* Pods-Rec Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rec Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball.release.xcconfig"; sourceTree = "<group>"; };
 		96CFF6ED8C8598F6BA8CD9A8 /* Pods_Rec_Basketball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rec_Basketball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				422D520621061A5D001393D0 /* GameInfoViewController.swift */,
 				42487BC2212F526E004D59B7 /* LineupPlayerListTableViewController.swift */,
 				42D47DAE2149A38700126D03 /* LineupPageTableView.swift */,
+				42C44EC52352B84A00D0ECAB /* LineupDetailsViewController.swift */,
 				42833C4C22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift */,
 				42ADBA8020F0102D0069C9CB /* Player.swift */,
 				422B070320FFDDD8006D3726 /* Game.swift */,
@@ -274,6 +277,7 @@
 				42ADBA9520FA46380069C9CB /* TeamListTableViewController.swift in Sources */,
 				42ADBA8D20F9558E0069C9CB /* PlayerInfoViewController.swift in Sources */,
 				42833C4D22D3DD2B00DE7B8E /* LineupRulesInfoViewController.swift in Sources */,
+				42C44EC62352B84A00D0ECAB /* LineupDetailsViewController.swift in Sources */,
 				42ADBA8120F0102D0069C9CB /* Player.swift in Sources */,
 				42ADBA6F20EFD3660069C9CB /* AppDelegate.swift in Sources */,
 				429D00EE22E75A00000AD515 /* LoadedTeams.swift in Sources */,

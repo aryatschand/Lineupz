@@ -13,7 +13,7 @@ class TeamOptionsTableViewController: UITableViewController {
     var team: Team!
     var teamIndex: Int = 0
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Teams.plist")
-    let titleArray: [String] = ["Team Info (Gender, Grade, Name)", "Players (And Player Info)", "Schedule + Lineups"]
+    let titleArray: [String] = ["Team Info (Gender, Grade, Name)", "Players (And Player Info)", "Lineups"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

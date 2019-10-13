@@ -52,6 +52,7 @@ class ScheduleTableViewController: UITableViewController {
     // Load all the schedule data and save it
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        /*
         brokenTeamArray = team.name.components(separatedBy: " ")
         trialLoad()
         if team.numberOfGames >= 1 && doneloading == true {
@@ -78,6 +79,7 @@ class ScheduleTableViewController: UITableViewController {
             }
         }
         currentNewGame = tableView.numberOfRows(inSection: 0)
+ */
         saveTeamsNoReload()
         tableView.reloadData()
     }
@@ -89,6 +91,7 @@ class ScheduleTableViewController: UITableViewController {
     
     // Allow user to delete a game by swiping
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
         if (editingStyle == .delete) {
             let alert = UIAlertController(title: "Delete Game", message: "Are You Sure You Want to Delete Game?", preferredStyle: .alert)
             let delete = UIAlertAction(title: "Delete", style: .default, handler: { (action) in
@@ -107,15 +110,17 @@ class ScheduleTableViewController: UITableViewController {
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
         }
+ 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return team.numberOfGames
+        return 1
     }
     
     // Delete incomplete games and set labels with game information
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameScheduleCell", for: indexPath)
+        /*
         do {
             if team.gameList[indexPath.row].Opponent == "remove"{
                 try team.gameList.remove(at: indexPath.row)
@@ -142,23 +147,37 @@ class ScheduleTableViewController: UITableViewController {
             self.present(alert, animated: true)
         }
         saveTeamsNoReload()
+        */
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "GameInfoSelect", sender: self)
     }
     
     // Allow user to add games
     @IBAction func addButton(_ sender: UIBarButtonItem) {
+
+        // 4. Present the alert.
+        
         let alert = UIAlertController(title: "Add New Game", message: "", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Lineup name"
+        }
         let action = UIAlertAction(title: "Add Game", style: .default) { (action) in
+            let textField = alert.textFields![0]
             let newGame = Game()
             self.team.gameList.append(newGame)
+            if textField.text != "" {
+                self.team.gameList[self.team.gameList.count-1].name = textField.text!
+            } else {
+                self.team.gameList[self.team.gameList.count-1].name = "Lineup \(self.self.team.gameList[self.team.gameList.count-1])"
+            }
             self.saveTeams()
-            self.performSegue(withIdentifier: "GameInfoNew", sender: self)
+            self.performSegue(withIdentifier: "NewLineup", sender: self)
             self.team.numberOfGames = self.team.numberOfGames + 1
             self.currentNewGame = self.team.numberOfGames
         }
@@ -192,7 +211,7 @@ class ScheduleTableViewController: UITableViewController {
             self.present(alert, animated: true)
         }
     }
-    
+     /*
     // Load and parse HTML schedule contents
     func trialLoad() {
         if team.gamesPulled == false{
@@ -450,6 +469,7 @@ class ScheduleTableViewController: UITableViewController {
         }))
         self.present(alert, animated: true)
     }
+ */
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameInfoSelect" {
@@ -464,6 +484,7 @@ class ScheduleTableViewController: UITableViewController {
             TeamInfoViewController.teamIndex = teamIndexBackup
             TeamInfoViewController.teamArray = teamArray
         } else if segue.identifier == "GameInfoNew" {
+            /*
             let GameInfoViewController = segue.destination as! GameInfoViewController
             GameInfoViewController.gameIndex = currentNewGame
             GameInfoViewController.team = team
@@ -479,6 +500,12 @@ class ScheduleTableViewController: UITableViewController {
                 }
             }
             saveTeams()
+ */
+        }  else if segue.identifier == "NewLineup" {
+            let GameOptionsTableViewController = segue.destination as! GameOptionsTableViewController
+            var selectedIndexPath = tableView.indexPathForSelectedRow
+            GameOptionsTableViewController.team = team
+            GameOptionsTableViewController.teamArray = teamArray
         }
     }
 }

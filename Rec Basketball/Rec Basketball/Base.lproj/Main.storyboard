@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gWf-CI-ZEQ">
-    <device id="retina6_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gWf-CI-ZEQ">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,10 +18,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeamsCell" id="p0p-ro-w5d">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p0p-ro-w5d" id="M6R-d2-jm8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -121,10 +119,10 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableTitleCell" id="4Mw-F2-CSP">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Mw-F2-CSP" id="95B-2N-1VW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -154,13 +152,13 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-sh-i8X">
-                                <rect key="frame" x="0.0" y="265" width="414" height="24"/>
+                                <rect key="frame" x="0.0" y="272" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coach Last Name For Reminder (Optional)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u07-vn-J0R">
-                                <rect key="frame" x="0.0" y="181" width="414" height="19.666666666666657"/>
+                                <rect key="frame" x="0.0" y="184" width="414" height="19.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +170,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MH-6f-faf">
-                                <rect key="frame" x="48" y="265" width="319" height="150"/>
+                                <rect key="frame" x="48" y="272" width="319" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="5Vw-nA-nKC"/>
                                 </constraints>
@@ -182,7 +180,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </pickerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iv4-W6-koP">
-                                <rect key="frame" x="0.0" y="133" width="414" height="29"/>
+                                <rect key="frame" x="0.0" y="133" width="414" height="32"/>
                                 <segments>
                                     <segment title="Boys"/>
                                     <segment title="Girls"/>
@@ -192,14 +190,13 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLp-X1-Uci">
-                                <rect key="frame" x="0.0" y="416" width="414" height="24"/>
+                                <rect key="frame" x="0.0" y="423" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Coach Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzR-rJ-mC6">
-                                <rect key="frame" x="48" y="208" width="319" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="48" y="211" width="319" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -207,28 +204,28 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pb-kK-srh">
-                                <rect key="frame" x="0.0" y="169" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="172" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="Te9-MB-mFL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIP-S8-5ch">
-                                <rect key="frame" x="0.0" y="253" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="mDZ-jH-xk3"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuj-rc-Yeo">
-                                <rect key="frame" x="0.0" y="404" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="411" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="fGV-rt-5g8"/>
                                 </constraints>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2IP-EX-Lcd">
-                                <rect key="frame" x="48" y="417" width="319" height="150"/>
+                                <rect key="frame" x="48" y="424" width="319" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="gvo-hb-GoN"/>
                                 </constraints>
@@ -238,7 +235,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSy-5X-rKz">
-                                <rect key="frame" x="0.0" y="560" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="567" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -310,10 +307,10 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerCell" id="rrD-e4-eWS">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rrD-e4-eWS" id="nko-xv-7b3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -342,7 +339,7 @@ All of the code for this app is available on GitHub under my account aryatschand
             </objects>
             <point key="canvasLocation" x="1920" y="-675"/>
         </scene>
-        <!--Schedule-->
+        <!--Lineups-->
         <scene sceneID="HCs-OU-WQ2">
             <objects>
                 <tableViewController id="43J-y7-bUz" customClass="ScheduleTableViewController" customModule="Rec_Basketball" customModuleProvider="target" sceneMemberID="viewController">
@@ -350,30 +347,14 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lNC-7T-SyT">
-                            <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem title="Reload Table Data" id="46h-g9-Sde">
-                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <action selector="RelooadPressed:" destination="43J-y7-bUz" id="86U-tu-utG"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                            <color key="barTintColor" red="1" green="0.67702328720000005" blue="0.26632641379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameScheduleCell" id="Mfd-x0-vZ6">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mfd-x0-vZ6" id="HFU-G8-LOf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="DMv-Hb-vrb" kind="show" identifier="GameInfoSelect" id="wls-qM-uTa"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -382,7 +363,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Schedule" id="9Ik-YQ-sFc">
+                    <navigationItem key="navigationItem" title="Lineups" id="9Ik-YQ-sFc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HQA-bC-0mr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -393,14 +374,15 @@ All of the code for this app is available on GitHub under my account aryatschand
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="eO9-gA-blh" kind="show" identifier="ScheduleToTeamInfo" id="z8K-3C-g6s"/>
-                        <segue destination="MHZ-qH-C5X" kind="show" identifier="GameInfoNew" id="qhZ-CY-Sw3"/>
+                        <segue destination="DMv-Hb-vrb" kind="show" identifier="NewLineup" id="QkK-EX-WUi"/>
+                        <segue destination="DMv-Hb-vrb" kind="show" identifier="GameInfoSelect" id="Yuh-qv-laJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYu-db-jjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1946" y="844"/>
         </scene>
-        <!--Game Options-->
+        <!--Lineup Options-->
         <scene sceneID="ZgV-5s-miO">
             <objects>
                 <tableViewController id="DMv-Hb-vrb" customClass="GameOptionsTableViewController" customModule="Rec_Basketball" customModuleProvider="target" sceneMemberID="viewController">
@@ -410,10 +392,10 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameTitleCell" id="F4N-Wb-k3q">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F4N-Wb-k3q" id="bxG-wb-oBp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -423,16 +405,17 @@ All of the code for this app is available on GitHub under my account aryatschand
                             <outlet property="delegate" destination="DMv-Hb-vrb" id="FI8-Ib-5I8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Game Options" id="oTu-QA-XbV"/>
+                    <navigationItem key="navigationItem" title="Lineup Options" id="oTu-QA-XbV"/>
                     <connections>
                         <segue destination="MHZ-qH-C5X" kind="show" identifier="OptionsToGameInfo" id="oJP-dC-f1h"/>
                         <segue destination="PBb-eC-zwY" kind="show" identifier="OptionsToPlayerList" id="09a-MV-sLb"/>
                         <segue destination="DKe-XE-XMi" kind="show" identifier="OptionsToLineup" id="4zB-gn-rfh"/>
+                        <segue destination="y8N-ow-Zs0" kind="show" identifier="Details" id="N7x-bu-okh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vn-P1-7zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2971" y="852"/>
+            <point key="canvasLocation" x="2896" y="852"/>
         </scene>
         <!--Game Info-->
         <scene sceneID="kr2-Ff-66L">
@@ -447,9 +430,6 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="2cN-EM-Fbg"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="554046462.14335704">
-                                    <!--2018-07-23 13:47:42 +0000-->
-                                </date>
                                 <locale key="locale" localeIdentifier="en_US"/>
                                 <connections>
                                     <action selector="datePickerChanged:" destination="MHZ-qH-C5X" eventType="valueChanged" id="dBp-GU-JO0"/>
@@ -522,10 +502,10 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerCell" id="odc-Bh-yBP">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="odc-Bh-yBP" id="KrN-jm-evB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -539,7 +519,66 @@ All of the code for this app is available on GitHub under my account aryatschand
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb3-dp-qc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3923" y="852"/>
+            <point key="canvasLocation" x="4420" y="904"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="nls-0r-gjo">
+            <objects>
+                <viewController id="y8N-ow-Zs0" customClass="LineupDetailsViewController" customModule="Rec_Basketball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pW2-IK-Bwc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lineup Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGj-FM-EiH">
+                                <rect key="frame" x="0.0" y="148" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZ6-RE-tna">
+                                <rect key="frame" x="97" y="189" width="220" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uhg-75-Fug">
+                                <rect key="frame" x="10" y="336" width="394" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94570433023350253" green="0.66939369276843075" blue="0.36782815187851842" alpha="0.19154109589041093" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lineup Details (Enter Below)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-5h-hQE">
+                                <rect key="frame" x="0.0" y="290" width="414" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAi-dA-8jX">
+                                <rect key="frame" x="180" y="509" width="54" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savebtn:" destination="y8N-ow-Zs0" eventType="touchUpInside" id="apP-fy-yEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KVq-Q7-wbX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="p0J-Fe-POq"/>
+                    <connections>
+                        <outlet property="DetailsField" destination="Uhg-75-Fug" id="YvW-Re-2yE"/>
+                        <outlet property="NameField" destination="tZ6-RE-tna" id="E6c-LF-V5b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaG-Ef-05L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5195.652173913044" y="122.54464285714285"/>
         </scene>
         <!--Lineup-->
         <scene sceneID="bqr-dC-JnR">
@@ -565,7 +604,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                             </connections>
                         </segmentedControl>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cTB-iQ-qQh">
-                            <rect key="frame" x="0.0" y="102" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="129.66666793823242" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Lineup Rules Info"/>
@@ -575,10 +614,10 @@ All of the code for this app is available on GitHub under my account aryatschand
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="LineupPlayerCell" id="SgO-LD-L0l">
-                                <rect key="frame" x="0.0" y="58" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="58" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SgO-LD-L0l" id="nuW-uY-dow">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -595,17 +634,10 @@ All of the code for this app is available on GitHub under my account aryatschand
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Lineup" id="V4l-Mw-lOl">
-                        <barButtonItem key="rightBarButtonItem" title="Auto-Gen" id="lYx-sm-Yjc">
-                            <connections>
-                                <action selector="AutoGen:" destination="DKe-XE-XMi" id="lL1-pP-otz"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Lineup" id="Vbl-uL-Yr8"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="PeriodControlValue" destination="r1q-xf-h86" id="HWj-FR-5eD"/>
-                        <outlet property="TitleLabel" destination="V4l-Mw-lOl" id="Fhz-jV-SF2"/>
                         <segue destination="DMv-Hb-vrb" kind="show" identifier="LineupToOptions" id="4lM-n0-LNk"/>
                     </connections>
                 </tableViewController>
@@ -622,7 +654,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rules Info" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djj-0n-2P6">
-                                <rect key="frame" x="20" y="59" width="374" height="740"/>
+                                <rect key="frame" x="20" y="103" width="374" height="696"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -655,13 +687,13 @@ All of the code for this app is available on GitHub under my account aryatschand
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyy-No-6Mv">
-                                <rect key="frame" x="0.0" y="334.33333333333331" width="414" height="24"/>
+                                <rect key="frame" x="0.0" y="346.33333333333331" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offensive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCG-ie-lpZ">
-                                <rect key="frame" x="0.0" y="362.33333333333331" width="224" height="21"/>
+                                <rect key="frame" x="0.0" y="374.33333333333331" width="224" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="224" id="Wul-kn-DKo"/>
                                 </constraints>
@@ -670,7 +702,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Uh-d9-DZl">
-                                <rect key="frame" x="0.0" y="372.33333333333331" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="384.33333333333331" width="414" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="ezR-hy-aZn"/>
                                 </constraints>
@@ -680,8 +712,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eER-he-dhK">
-                                <rect key="frame" x="53" y="125.66666666666669" width="310" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="53" y="125.66666666666669" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -690,7 +721,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defensive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtC-Sk-bid">
-                                <rect key="frame" x="216" y="362.33333333333331" width="198" height="21"/>
+                                <rect key="frame" x="216" y="374.33333333333331" width="198" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="198" id="le0-mq-Jt7"/>
                                 </constraints>
@@ -699,8 +730,7 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zv-kT-RxE">
-                                <rect key="frame" x="52" y="203.33333333333334" width="310" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="52" y="207.33333333333334" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                 <connections>
@@ -708,20 +738,19 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parent Phone Number (Incomplete)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWt-eY-GHl">
-                                <rect key="frame" x="0.0" y="247.33333333333337" width="414" height="24"/>
+                                <rect key="frame" x="0.0" y="255.33333333333337" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.1043915102" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parent Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aof-x0-iZA">
-                                <rect key="frame" x="0.0" y="171" width="414" height="25.666666666666657"/>
+                                <rect key="frame" x="0.0" y="175" width="414" height="25.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4M-QC-3kM">
-                                <rect key="frame" x="52" y="279.33333333333331" width="310" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="52" y="287.33333333333331" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                 <connections>
@@ -736,13 +765,13 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggu-aU-jfr">
-                                <rect key="frame" x="0.0" y="494.33333333333331" width="414" height="23.999999999999943"/>
+                                <rect key="frame" x="0.0" y="506.33333333333326" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6z-jf-CYd">
-                                <rect key="frame" x="0.0" y="628" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="640" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -750,35 +779,35 @@ All of the code for this app is available on GitHub under my account aryatschand
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWz-A0-j2M">
-                                <rect key="frame" x="0.0" y="163" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="pLT-02-xSL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mn1-hw-GpH">
-                                <rect key="frame" x="0.0" y="241.33333333333334" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="249.33333333333334" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="FxK-g3-Kje"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ry5-cu-cx7">
-                                <rect key="frame" x="0.0" y="322.33333333333331" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="334.33333333333331" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="8DR-yt-m9o"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTR-1E-aqp">
-                                <rect key="frame" x="0.0" y="482.33333333333331" width="414" height="4"/>
+                                <rect key="frame" x="0.0" y="494.33333333333331" width="414" height="4"/>
                                 <color key="backgroundColor" red="0.36204966560000001" green="0.64132335119999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="CHY-6h-lc8"/>
                                 </constraints>
                             </view>
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5h7-Uy-IxY">
-                                <rect key="frame" x="96" y="508.33333333333326" width="222" height="120"/>
+                                <rect key="frame" x="96" y="520.33333333333337" width="222" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="yNj-tk-Xgu"/>
                                 </constraints>
@@ -883,9 +912,8 @@ All of the code for this app is available on GitHub under my account aryatschand
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="WCK-af-zYS"/>
-        <segue reference="qhZ-CY-Sw3"/>
-        <segue reference="4lM-n0-LNk"/>
-        <segue reference="mqg-7O-R1z"/>
+        <segue reference="Yuh-qv-laJ"/>
+        <segue reference="z8K-3C-g6s"/>
         <segue reference="Mrt-u7-inf"/>
     </inferredMetricsTieBreakers>
 </document>

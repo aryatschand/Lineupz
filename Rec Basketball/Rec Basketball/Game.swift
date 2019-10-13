@@ -9,12 +9,8 @@
 import Foundation
 
 class Game: Codable {
-    var Date: String = ""
-    var Day: String = ""
-    var Time: String = ""
-    var Venue: String = ""
-    var Opponent: String = ""
-    var FormattedDate: Date!
+    var name: String = "" 
+    var details: String = ""
     var GameEdit: String = ""
     var inThePast: Bool = false
     var delete: Bool = false
