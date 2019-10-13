@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftSoup
 
 class TeamListTableViewController: UITableViewController {
     var idNumber: Int = 0

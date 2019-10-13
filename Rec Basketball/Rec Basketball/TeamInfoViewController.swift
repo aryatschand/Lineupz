@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftSoup
 
 class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     

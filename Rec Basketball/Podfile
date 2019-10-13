@@ -6,6 +6,5 @@ target 'Rec Basketball' do
   use_frameworks!
 
   # Pods for Rec Basketball
-pod 'SwiftSoup'
 
 end

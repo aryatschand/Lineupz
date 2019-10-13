@@ -152,7 +152,6 @@
 				42ADBA6720EFD3660069C9CB /* Sources */,
 				42ADBA6820EFD3660069C9CB /* Frameworks */,
 				42ADBA6920EFD3660069C9CB /* Resources */,
-				2E4914C76C3CB933AA91698D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,24 +219,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E4914C76C3CB933AA91698D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rec Basketball/Pods-Rec Basketball-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		60872FC8FA0D2639CC2CC96E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
