@@ -57,10 +57,10 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
     // Set rows in table and make lineup row red if lineup is incomplete
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameTitleCell", for: indexPath)
-        if team.gameList[gameIndex].lineupIncomplete == true && indexPath.row == 1 {
+        if team.gameList[gameIndex].lineupIncomplete == true && indexPath.row == 2 {
             cell.textLabel?.textColor = UIColor.red
             cell.textLabel?.text = titleArray[indexPath.row] + " - Incomplete"
-        } else if team.gameList[gameIndex].lineupIncomplete == false && indexPath.row == 1 {
+        } else if team.gameList[gameIndex].lineupIncomplete == false && indexPath.row == 2 {
             cell.textLabel?.textColor = UIColor.black
             cell.textLabel?.text = titleArray[indexPath.row] + " - Complete"
         } else {
@@ -80,8 +80,6 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
             } else if indexPath.row == 1 {
                 self.performSegue(withIdentifier: "OptionsToPlayerList", sender: self)
             } else if indexPath.row == 2 {
-                self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
-            } else if indexPath.row == 3 {
                 var playersNoOpen: Int = 0
                 var canSegue: Bool = true
                 if team.gameList[gameIndex].SegmentOneArray.count != 0 {
@@ -141,11 +139,17 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                     playersNoOpen = 0
                     if canSegue == true {
                         self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
+                    } else {
+                        let alert = UIAlertController(title: "Not Enough Players", message: "There are not enough players attending 1+ periods.", preferredStyle: .alert)
+                        let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                        })
+                        alert.addAction(cancel)
+                        self.present(alert, animated: true, completion: nil)
                     }
                 } else {
                     self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
                 }
-            } else if indexPath.row == 4 && team.gameList[gameIndex].sortedRatingArray.count != 0 {
+            } else if indexPath.row == 3 && team.gameList[gameIndex].sortedRatingArray.count != 0 {
                 SegmentOneNameIndex = []
                 SegmentTwoNameIndex = []
                 SegmentThreeNameIndex = []
@@ -318,7 +322,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                     present(composeVC, animated: true, completion: nil)
                 } catch {
                 }
-            } else if indexPath.row == 5 && team.gameList[gameIndex].introGiven == true {
+            } else if indexPath.row == 4 && team.gameList[gameIndex].introGiven == true {
                 var poolPlayer = Player()
                 poolPlayer.name = "POOL PLAYER"
                 poolPlayer.rating = 10
@@ -331,7 +335,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                 team.gameList[gameIndex].SegmentFourArray.append(poolPlayer.copy() as! Player)
                 team.gameList[gameIndex].SegmentFiveArray.append(poolPlayer.copy() as! Player)
                 team.gameList[gameIndex].SegmentSixArray.append(poolPlayer.copy() as! Player)
-            } else if indexPath.row == 6 && team.gameList[gameIndex].introGiven == true && NameTwoD[0].contains("POOL PLAYER") {
+            } else if indexPath.row == 5 && team.gameList[gameIndex].introGiven == true && NameTwoD[0].contains("POOL PLAYER") {
                 // Switch each pool player to OPEN so it can be replaced
                 var indexOne: Int = NameTwoD[0].index(of: "POOL PLAYER")!
                 var indexTwo: Int = NameTwoD[1].index(of: "POOL PLAYER")!
@@ -345,7 +349,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                 team.gameList[gameIndex].SegmentFourArray[indexFour].name = "OPEN"
                 team.gameList[gameIndex].SegmentFiveArray[indexFive].name = "OPEN"
                 team.gameList[gameIndex].SegmentSixArray[indexSix].name = "OPEN"
-            } else if indexPath.row == 7 {
+            } else if indexPath.row == 6 {
                 team.gameList[gameIndex].introGiven = false
             }
         }
@@ -362,7 +366,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
         }
-        if team.playerList.count <= 4 {
+        if team.playerList.count <= 4{
             let alert = UIAlertController(title: "Not Enough Players", message: "Less than 5 players were entered into the team. Please add 5 or more players to make a full team", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
             })
@@ -372,6 +376,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
         } else {
              EnoughPlayers = true
         }
+        
         team.gameList[gameIndex].playerList = team.playerList
         
         if team.playerList.count != 0 {

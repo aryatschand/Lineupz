@@ -64,6 +64,7 @@ class LineupPageTableView: UITableViewController, MFMailComposeViewControllerDel
             }
         }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +72,7 @@ class LineupPageTableView: UITableViewController, MFMailComposeViewControllerDel
     
     // Check if the lineup needs to be reset and perform basic checks
     override func viewWillAppear(_ animated: Bool) {
-        /*
+        
         if team.gameList[gameIndex].introGiven == false {
             sortPlayersByRating()
         }
@@ -98,7 +99,7 @@ class LineupPageTableView: UITableViewController, MFMailComposeViewControllerDel
         CheckPlayerPeriods()
         CompleteCheck()
         tableView.reloadData()
- */
+ 
     }
     
     // Number of rows are based on the period

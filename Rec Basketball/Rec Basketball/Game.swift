@@ -28,4 +28,5 @@ class Game: Codable {
     var SegmentSixArray = [Player]()
     var introGiven: Bool = false
     var lineupIncomplete: Bool = true
+    var detailscomplete: Bool = false
 }

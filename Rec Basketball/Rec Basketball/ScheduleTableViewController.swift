@@ -66,20 +66,14 @@ class ScheduleTableViewController: UITableViewController {
                 team.gameList[x-1].Opponent = OpponentArr[x-1]
                 
                 //Assume all players will attend every game
-                if team.playerList.count>0 {
-                    for var a in 0...team.playerList.count-1 {
-                        team.playerList[a].availability = 0
-                    }
-                }
                 
-                if team.gameList[x-1].playerLoaded == false {
-                    team.gameList[x-1].playerList = team.playerList
-                    team.gameList[x-1].playerLoaded = true
-                }
+                
+                
             }
         }
-        currentNewGame = tableView.numberOfRows(inSection: 0)
+        
  */
+        currentNewGame = tableView.numberOfRows(inSection: 0)
         saveTeamsNoReload()
         tableView.reloadData()
     }
@@ -114,12 +108,13 @@ class ScheduleTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return team.gameList.count
     }
     
     // Delete incomplete games and set labels with game information
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameScheduleCell", for: indexPath)
+        cell.textLabel?.text = team.gameList[indexPath.row].name
         /*
         do {
             if team.gameList[indexPath.row].Opponent == "remove"{
@@ -153,8 +148,10 @@ class ScheduleTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "GameInfoSelect", sender: self)
     }
+    
+    
+    @IBOutlet weak var TitleLabel: UINavigationItem!
     
     // Allow user to add games
     @IBAction func addButton(_ sender: UIBarButtonItem) {
@@ -174,7 +171,7 @@ class ScheduleTableViewController: UITableViewController {
             if textField.text != "" {
                 self.team.gameList[self.team.gameList.count-1].name = textField.text!
             } else {
-                self.team.gameList[self.team.gameList.count-1].name = "Lineup \(self.self.team.gameList[self.team.gameList.count-1])"
+                self.team.gameList[self.team.gameList.count-1].name = "Lineup \(self.self.team.gameList.count)"
             }
             self.saveTeams()
             self.performSegue(withIdentifier: "NewLineup", sender: self)
@@ -506,6 +503,17 @@ class ScheduleTableViewController: UITableViewController {
             var selectedIndexPath = tableView.indexPathForSelectedRow
             GameOptionsTableViewController.team = team
             GameOptionsTableViewController.teamArray = teamArray
+            GameOptionsTableViewController.gameIndex = currentNewGame
+            team.gameList[currentNewGame].GameEdit = "Added"
+            team.gameList[currentNewGame].playerList = team.playerList
+            
+            // Add player availability for added games
+            if team.playerList.count != 0 {
+                for var x in 0...team.playerList.count-1 {
+                    team.playerList[x].availabilityArray.append(0)
+                }
+            }
+            saveTeams()
         }
     }
 }
