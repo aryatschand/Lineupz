@@ -87,7 +87,7 @@ class ScheduleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if (editingStyle == .delete) {
-            let alert = UIAlertController(title: "Delete Game", message: "Are You Sure You Want to Delete Game?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete Lineup", message: "Are You Sure You Want to Delete the Lineup?", preferredStyle: .alert)
             let delete = UIAlertAction(title: "Delete", style: .default, handler: { (action) in
                 self.currentNewGame = self.currentNewGame - 1
                 self.team.numberOfGames = self.team.numberOfGames-1
@@ -158,13 +158,13 @@ class ScheduleTableViewController: UITableViewController {
 
         // 4. Present the alert.
         
-        let alert = UIAlertController(title: "Add New Game", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add New Lineup", message: "", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         }
         alert.addTextField { (textField) in
             textField.placeholder = "Lineup name"
         }
-        let action = UIAlertAction(title: "Add Game", style: .default) { (action) in
+        let action = UIAlertAction(title: "Add Lineup", style: .default) { (action) in
             let textField = alert.textFields![0]
             let newGame = Game()
             self.team.gameList.append(newGame)

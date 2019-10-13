@@ -140,7 +140,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                     if canSegue == true {
                         self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
                     } else {
-                        let alert = UIAlertController(title: "Not Enough Players", message: "There are not enough players attending 1+ periods.", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Not Enough Players", message: "There Are Nt Enough Players Attending 1+ Periods.", preferredStyle: .alert)
                         let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
                         })
                         alert.addAction(cancel)
@@ -177,7 +177,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                 
                 let fileName = "ContactInformation.csv"
                 let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
-                var csvText = "Position,1st Period,2nd Period,3rd Period,4th Period,5th Period, 6th Period\n"
+                var csvText = "Position,1st Period,2nd Period,3rd Period,4th Period,5th Period, th Period\n"
                 let count = team.gameList[gameIndex].sortedRatingArray.count
                 let player = team.gameList[gameIndex]
                 
@@ -359,7 +359,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if team.gameList[gameIndex].name == "" {
-            let alert = UIAlertController(title: "Empty Name", message: "Please enter a name for the lineup.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Empty Name", message: "Please Enter a Name For the Lineup.", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
                 self.performSegue(withIdentifier: "Details", sender: self)
             })
@@ -367,7 +367,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
             self.present(alert, animated: true, completion: nil)
         }
         if team.playerList.count <= 4{
-            let alert = UIAlertController(title: "Not Enough Players", message: "Less than 5 players were entered into the team. Please add 5 or more players to make a full team", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Not Enough Players", message: "Less Than 5 Players Were Entered Into the Team. Please Add 5 or More Players to Make a Full Team", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
             })
             alert.addAction(cancel)
