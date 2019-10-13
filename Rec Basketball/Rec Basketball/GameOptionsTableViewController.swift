@@ -316,7 +316,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                     try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
                     let composeVC = MFMailComposeViewController()
                     composeVC.mailComposeDelegate = self
-                    composeVC.setSubject("Lineup")
+                    composeVC.setSubject("'\(team.gameList[gameIndex].name)' from Lineupz App")
                     composeVC.setMessageBody("\(emailRemindString)\n\nLineup table attached", isHTML: false)
                     composeVC.addAttachmentData(try NSData(contentsOf: path!) as Data, mimeType: "text/csv", fileName: "ContactInformation.csv")
                     present(composeVC, animated: true, completion: nil)

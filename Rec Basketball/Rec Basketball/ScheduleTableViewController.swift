@@ -162,7 +162,7 @@ class ScheduleTableViewController: UITableViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         }
         alert.addTextField { (textField) in
-            textField.placeholder = "Lineup name"
+            textField.placeholder = "Lineup name (optional)"
         }
         let action = UIAlertAction(title: "Add Lineup", style: .default) { (action) in
             let textField = alert.textFields![0]
