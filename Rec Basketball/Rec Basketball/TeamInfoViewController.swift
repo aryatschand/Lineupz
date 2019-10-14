@@ -8,11 +8,10 @@
 
 import UIKit
 
-class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class TeamInfoViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var GenderControl: UISegmentedControl!
-    @IBOutlet weak var GradePicker: UIPickerView!
-    @IBOutlet weak var TeamNamePicker: UIPickerView!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var Details: UITextView!
     
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Teams.plist")
     var team: Team!
@@ -44,13 +43,6 @@ class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let GirlsGradeNames: [String] = ["Default", "3rd and 4th Grade", "5th and 6th Grade", "7th and 8th Grade", "HS Division"]
     var canEdit: Bool = true
     
-    @IBOutlet weak var CoachNameEntry: UITextField!
-    
-    // Save coach name
-    @IBAction func CoachEntryChanged(_ sender: UITextField) {
-        team.coachName = CoachNameEntry.text!
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
@@ -60,14 +52,13 @@ class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
-        self.CoachNameEntry.delegate = self
         arraylist = team.arrayList
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+    /*
     // For grade and team name picker views
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == GradePicker {
@@ -169,19 +160,29 @@ class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.TeamNamePicker.reloadAllComponents()
         
     }
+ */
+    
+    @IBAction func namechanged(_ sender: Any) {
+        teamArray[teamIndex].name = name.text!
+        saveTeams()
+    }
+    
     
     @IBAction func SaveButtonPressed(_ sender: UIButton) {
         if teamArray[teamIndex].name == "" || teamArray[teamIndex].grade == "" || teamArray[teamIndex].name == "Default" || teamArray[teamIndex].grade == "Default" || teamArray[teamIndex].name == "remove" || teamArray[teamIndex].name == "Incomplete Team"{
-            let alert = UIAlertController(title: "Finish Info", message: "There is some information missing.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Missing name", message: "Please enter a name for your team.", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default) { (action) in }
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         } else {
+            teamArray[teamIndex].details = Details.text!
+            saveTeams()
             navigationController?.popViewController(animated: true)
         }
     }
     
     // When gender is toggled
+    /*
     @IBAction func GenderControlChanged(_ sender: UISegmentedControl) {
         if GenderControl.selectedSegmentIndex != teamGender {
             teamGender = GenderControl.selectedSegmentIndex
@@ -203,30 +204,26 @@ class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         GradePicker.reloadAllComponents()
         TeamNamePicker.reloadAllComponents()
     }
+ */
     
     // Move items in view to the corresponding team information
     override func viewWillAppear(_ animated: Bool) {
         if canEdit == false {
-            GenderControl.isEnabled = false
-            GradePicker.isUserInteractionEnabled = false
-            TeamNamePicker.isUserInteractionEnabled = false
             navigationItem.hidesBackButton = false
         } else {
             navigationItem.hidesBackButton = true
         }
         super.viewWillAppear(animated)
-        if teamArray[teamIndex].coachName != "" {
-            CoachNameEntry.text = teamArray[teamIndex].coachName
-        }
         
         if teamArray[teamIndex].name != "" && teamArray[teamIndex].grade != "" {
             saveTeams()
         }
         
-        if teamArray[teamIndex].name != "" {
-            self.TeamNamePicker.selectRow(teamArray[teamIndex].teamNameNumber, inComponent: 0, animated: false)
-        }
-
+        name.text = team.name
+        Details.text = team.details
+        saveTeams()
+        
+        /*
         if teamArray[teamIndex].grade != "" {
             self.GradePicker.selectRow(teamArray[teamIndex].teamGradeNumber, inComponent: 0, animated: false)
             if teamArray[teamIndex].gender == 0 {
@@ -241,6 +238,7 @@ class TeamInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if teamArray[teamIndex].gender == 1 {
             self.GenderControl.selectedSegmentIndex = 1
         }
+ */
     }
     
     // Check to see if all information is filled and if not, allow other views to recognize incomplete team

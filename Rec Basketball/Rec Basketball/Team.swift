@@ -10,6 +10,7 @@ import Foundation
 
 class Team: Codable {
     var name : String = ""
+    var details: String = ""
     var gender: Int = 0
     var grade: String = ""
     var teamNameNumber: Int = 0

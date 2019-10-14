@@ -11,6 +11,7 @@ import UIKit
 class TeamListTableViewController: UITableViewController {
     var idNumber: Int = 0
     var htmlcontents: String = ""
+    /*
     var Array1: [String] = ["Default", "Bulls", "Bucks"]
     var Array2: [String] = ["Default", "Bulls", "Bucks"]
     var Array3: [String] = ["Default", "Bulls", "Bucks"]
@@ -28,6 +29,7 @@ class TeamListTableViewController: UITableViewController {
     var arraylist: [[String]] = []
     let emptyarray: [String] = []
     let idArray: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 15, 9, 11, 12, 13, 14]
+ */
     var teamArray = [Team]()
     var team: Team!
     var currentNewTeam: Int = 0
@@ -40,11 +42,13 @@ class TeamListTableViewController: UITableViewController {
         super.viewDidLoad()
         loadTeams()
         LoadTeamNames()
+        /*
         if teamArray.count > 0 {
             for var x in 0...teamArray.count-1 {
                 teamArray[x].arrayList = arraylist
             }
         }
+ */
     }
 
     // Set number of rows in table view
@@ -87,7 +91,7 @@ class TeamListTableViewController: UITableViewController {
             }
         } else {
             if team.name != "Incomplete Team" {
-                cell.textLabel?.text = "\(team.name) - \(genderName) \(team.grade)"
+                cell.textLabel?.text = "\(team.name)"
             }
             else if team.name == "Incomplete Team" {
                 cell.textLabel?.text = team.name
@@ -119,22 +123,6 @@ class TeamListTableViewController: UITableViewController {
     }
     
     func LoadTeamNames() {
-        
-        arraylist.append(emptyarray)
-        arraylist.append(Array1)
-        arraylist.append(Array2)
-        arraylist.append(Array3)
-        arraylist.append(Array4)
-        arraylist.append(Array5)
-        arraylist.append(Array6)
-        arraylist.append(Array7)
-        arraylist.append(Array8)
-        arraylist.append(Array15)
-        arraylist.append(Array9)
-        arraylist.append(Array11)
-        arraylist.append(Array12)
-        arraylist.append(Array13)
-        arraylist.append(Array14)
          /*
         // Draw HTML contents from specific marlborobasketball.com link based on team gender and grade
         for x in 1...14 {
@@ -214,7 +202,7 @@ class TeamListTableViewController: UITableViewController {
             let action = UIAlertAction(title: "Let's Do It", style: .default) { (action) in
                 let newTeam = Team()
                 self.teamArray.append(newTeam)
-                self.teamArray[self.teamArray.count-1].arrayList = self.arraylist
+                //self.teamArray[self.teamArray.count-1].arrayList = self.arraylist
                 self.saveTeams()
                 self.performSegue(withIdentifier: "TeamInfoViewControllerAdd", sender: self)
             }
@@ -231,7 +219,7 @@ class TeamListTableViewController: UITableViewController {
         let action = UIAlertAction(title: "Add Team", style: .default) { (action) in
             let newTeam = Team()
             self.teamArray.append(newTeam)
-            self.teamArray[self.teamArray.count-1].arrayList = self.arraylist
+            //self.teamArray[self.teamArray.count-1].arrayList = self.arraylist
             self.saveTeams()
             self.performSegue(withIdentifier: "TeamInfoViewControllerAdd", sender: self)
         }
