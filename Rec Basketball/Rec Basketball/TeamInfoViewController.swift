@@ -169,7 +169,7 @@ class TeamInfoViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func SaveButtonPressed(_ sender: UIButton) {
-        if teamArray[teamIndex].name == "" || teamArray[teamIndex].grade == "" || teamArray[teamIndex].name == "Default" || teamArray[teamIndex].grade == "Default" || teamArray[teamIndex].name == "remove" || teamArray[teamIndex].name == "Incomplete Team"{
+        if teamArray[teamIndex].name == "" || teamArray[teamIndex].name == "remove" || teamArray[teamIndex].name == "Incomplete Team" {
             let alert = UIAlertController(title: "Missing name", message: "Please enter a name for your team.", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default) { (action) in }
             alert.addAction(action)
@@ -245,7 +245,7 @@ class TeamInfoViewController: UIViewController, UITextFieldDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         canEdit = true
         do {
-            if teamArray[teamIndex].name == "" || teamArray[teamIndex].grade == "" || teamArray[teamIndex].name == "Default" || teamArray[teamIndex].grade == "Default" || teamArray[teamIndex].name == "remove" || teamArray[teamIndex].name == "Incomplete Team"{
+            if teamArray[teamIndex].name == "" || teamArray[teamIndex].name == "remove" || teamArray[teamIndex].name == "Incomplete Team" {
                 teamArray[teamIndex].name = "remove"
             }
         } catch {
