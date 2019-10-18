@@ -77,11 +77,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="437" id="VhK-gd-gUi"/>
                                 </constraints>
-                                <string key="text">Lineupz is built by Arya Tschand for the Marlboro Recreation Basketball League. 
+                                <mutableString key="text">Lineupz is built by Arya Tschand for the Marlboro Recreation Basketball League. 
 
-Lineupz was built to help coaches manage their teams and make lineups easier. The app has a lineup interface where the coach can make their lineup and check if it is compliant with Marlboro Rec rules. The app also uses information from the Marlboro Rec website to make managing the schedule sending reminders easy. 
+Lineupz was built to help coaches manage their teams and make lineups easier. The app has a lineup interface where the coach can make their lineup and check if it is compliant with Marlboro Rec rules. 
 
-All of the code for this app is available on GitHub under my account aryatschand. If you are interested in implementing the app into another recreation sports program, please contact me at aryatschand616@gmail.com and I will be glad to help you! </string>
+All of the code for this app is available on GitHub under my account aryatschand. If you are interested in implementing the app into another recreation sports program, please contact me at aryatschand616@gmail.com and I will be glad to help you! </mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
