@@ -140,7 +140,7 @@ class GameOptionsTableViewController: UITableViewController, MFMailComposeViewCo
                     if canSegue == true {
                         self.performSegue(withIdentifier: "OptionsToLineup", sender: self)
                     } else {
-                        let alert = UIAlertController(title: "Not Enough Players", message: "There Are Nt Enough Players Attending 1+ Periods.", preferredStyle: .alert)
+                        let alert = UIAlertController(title: "Not Enough Players", message: "There Are Not Enough Players Attending 1+ Periods.", preferredStyle: .alert)
                         let cancel = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
                         })
                         alert.addAction(cancel)

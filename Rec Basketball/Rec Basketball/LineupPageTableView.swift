@@ -283,6 +283,9 @@ class LineupPageTableView: UITableViewController, MFMailComposeViewControllerDel
             }
             var addedStr: String = ""
             
+            if indexPath.row < twoDsegment[PeriodControlValue.selectedSegmentIndex].count && nameArray.contains(twoDsegment[PeriodControlValue.selectedSegmentIndex][indexPath.row].name) {
+                indexOfPlayer = nameArray.index(of: twoDsegment[PeriodControlValue.selectedSegmentIndex][indexPath.row].name)!
+            }
             // Display to user whether each player needs to play more or less periods
             if Double(ArrayList[indexOfPlayer].count) - expectedPeriods >= 1.0 {
                 addedStr = "-"
