@@ -208,11 +208,14 @@ class TeamInfoViewController: UIViewController, UITextFieldDelegate {
     
     // Move items in view to the corresponding team information
     override func viewWillAppear(_ animated: Bool) {
+        navigationItem.hidesBackButton = false
+        /*
         if canEdit == false {
             navigationItem.hidesBackButton = false
         } else {
             navigationItem.hidesBackButton = true
         }
+ */
         super.viewWillAppear(animated)
         
         if teamArray[teamIndex].name != "" && teamArray[teamIndex].grade != "" {

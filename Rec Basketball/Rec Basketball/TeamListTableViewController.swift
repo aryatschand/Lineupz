@@ -67,6 +67,12 @@ class TeamListTableViewController: UITableViewController {
             genderName = "Girls"
         }
         
+        if team.name == "" {
+            self.teamArray.remove(at: indexPath.row)
+            self.currentNewTeam = self.currentNewTeam - 1
+            self.saveTeams()
+        }
+        
         if team.name == "remove" {
             let alert = UIAlertController(title: "Incomplete Team(s)", message: "1 or more teams has incomplete information. Press Delete to delete team or Edit to keep team", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Delete", style: .cancel) { (action) in
@@ -206,7 +212,11 @@ class TeamListTableViewController: UITableViewController {
                 self.saveTeams()
                 self.performSegue(withIdentifier: "TeamInfoViewControllerAdd", sender: self)
             }
+            let cancel = UIAlertAction(title: "Not Yet", style: .cancel) { (action) in
+                
+            }
             alert.addAction(action)
+            alert.addAction(cancel)
             present(alert, animated: true, completion: nil)
         }
     }
