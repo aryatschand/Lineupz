@@ -249,7 +249,9 @@ class TeamInfoViewController: UIViewController, UITextFieldDelegate {
         canEdit = true
         do {
             if teamArray[teamIndex].name == "" || teamArray[teamIndex].name == "remove" || teamArray[teamIndex].name == "Incomplete Team" {
-                teamArray[teamIndex].name = "remove"
+                var teamcount = teamArray.count
+                teamArray[teamIndex].name = "Team \(teamcount)"
+                saveTeams()
             }
         } catch {
             let alert = UIAlertController(title: "Error Code 1", message: "Something went wrong! Please reload App.", preferredStyle: .alert)

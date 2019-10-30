@@ -66,12 +66,13 @@ class TeamListTableViewController: UITableViewController {
         } else if team.gender == 1 {
             genderName = "Girls"
         }
-        
+        /*
         if team.name == "" {
             self.teamArray.remove(at: indexPath.row)
             self.currentNewTeam = self.currentNewTeam - 1
             self.saveTeams()
         }
+ */
         
         if team.name == "remove" {
             let alert = UIAlertController(title: "Incomplete Team(s)", message: "1 or more teams has incomplete information. Press Delete to delete team or Edit to keep team", preferredStyle: .alert)
